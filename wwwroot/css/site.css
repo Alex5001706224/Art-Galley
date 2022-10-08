@@ -1,0 +1,89 @@
+﻿/* Styles used throughout the entire web site */
+
+html {
+    /* font-size 62.5% makes 1rem equal 10px for easy size calculations. */
+    font-size: 62.5%;
+    font-family: Calibri, Arial, sans-serif;
+    background-color: #EAEEFA;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    /* Default font-size to about 18px */
+    font-size: 1.8rem;
+}
+
+input, button {
+    margin: 0;
+    font-size: 1.8rem;
+    font-family: Calibri, Arial, sans-serif;
+}
+
+.container {
+    padding: 0 1rem;
+    max-width: 94rem;
+    /* Horizontally center containers */
+    margin: 0 auto;
+}
+
+section.page-section .container {
+    padding-bottom: 2rem;
+}
+
+h1 {
+    font-size: 4rem;
+    letter-spacing: -1px;
+    margin: 1em 0 .25em 0;
+}
+.overlay {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    background:#000;
+    height:100%;
+    width: 100%;
+   color:#EAEEFA;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:100px;
+    font-weight:900;
+    z-index: 1;
+    mix-blend-mode:multiply;
+}
+* {
+    box-sizing: border-box;
+}
+
+.img-zoom-container {
+    position: relative;
+     border: 1px solid #d4d4d4;
+    /*set the size of the result div:*/
+    width: 300px;
+    height: 300px;
+}
+
+
+.img-zoom-lens {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    /*set the size of the lens:*/
+    width: 40px;
+    height: 40px;
+}
+
+.img-zoom-result {
+    border: 1px solid #d4d4d4;
+    /*set the size of the result div:*/
+    width: 300px;
+    height: 300px;
+}
+.column {
+    flex: 30%;
+    padding: 5px;
+}
+.row {
+    display: flex;
+}

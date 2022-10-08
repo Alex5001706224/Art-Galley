@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/footer.css" rel="stylesheet" type="text/css" />
+    <link href="css/header.css" rel="stylesheet" type="text/css" />
+    <link href="css/nav.css" rel="stylesheet" type="text/css" />
+    <link href="css/site.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobile.css" rel="stylesheet" type="text/css" />
+    <link href="css/print.css" media="print" rel="stylesheet" type="text/css" />
+    <link href="css/register.css" rel="stylesheet" type="text/css" />
+
+    <script>
+        function createaccount() {
+            let val1 = document.forms["registerform"]["pwd1"].value;
+            let val2 = document.forms["registerform"]["pwd2"].value;
+            if (val1 != val2) {
+                alert("Please enter a valid password!")
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <nav class="page-nav">
+        <div class="container">
+            <a href="Home.html">Home</a>
+            <a href="AboutUs.html">About</a>
+            <a href="Register.html" class="active">Register</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <a href="Gallery.html">View Gallery</a>
+        </div>
+    </nav>
+    <header class="page-header">
+        <div class="container">
+            <h1>Welcome To Golden Gallery</h1>
+            <p class="tag-line">One of the greatest Art Gallery Web</p>
+
+        </div>
+    </header>
+
+   <section class="page-section register">
+       <h2>Register for a good deal!</h2>
+       <div class="container">
+           <form name="register" method="post" onsubmit="return createaccount">
+               <fieldset>
+                   <legend>Please Register Here</legend>
+                   <div id="username">
+                       User Name: <input type="text" pattern="^[a-zA-Z0-9]\{8,16}" required placeholder="Enetr username here" />
+                       <p>
+                           Please enter username with upper or lower case A-Z combine with numbers 0-9
+                           No special symbol allowed Max 16 characters
+                       </p>
+                   </div>
+                   <div id="fname">
+                       First Name: <input type="text" autofocus placeholder="Please enter your first name here" />
+                   </div>
+                   <div id="lnamefield">
+                       Last Name:<input type="text" required autofocus placeholder="Please enter your lirst name here" />
+                   </div>
+                   <div id="genderfield">
+                       Gender: <input list="genderange" />
+                       <datalist id="genderange">
+                           <option value="Male"></option>
+                           <option value="Female"></option>
+                           <option value="No Prefer"></option>
+                       </datalist>
+                   </div>
+                   <div id="datebirth">
+                       Date of Birth <input type="date" />
+                   </div>
+                   <div id="emialfield">
+                       Emial Address: <input type="email" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" />
+                   </div>
+                   <div id="pwdfield">
+                       Password: <input type="password" name="pwd1" autocomplete="off" pattern="^[a-zA-Z0-9!#$%&'*+/=?^_`]\w{8-14}" required />
+                       <p>
+                           Please create a password with upper or lower case A-Z combine with numbers 0-9 and special symbol !#$%&'*+/=?^_`
+                           Max for 14 characters
+                       </p>
+                   </div>
+                   <div id="Cpwdfirld">
+                       Confirm Password: <input type="password" name="pwd2" autocomplete="off" required />
+                   </div>
+               </fieldset>
+               <input type="submit" value="Register" />
+               <input type="reset" value="Reset" />
+           </form>
+       </div>
+   </section>
+
+    <footer class="page-footer">
+        <div class="container">
+            <p>
+                Golden Gallery
+            </p>
+            <address>
+                Conference Center<br />
+                705 Pike Street Seattle<br />
+                Seattle<br />
+                WA 98101-2310
+            </address>
+            <p>
+                &#169; 2022 Golden
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
